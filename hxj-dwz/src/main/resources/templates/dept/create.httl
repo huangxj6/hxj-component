@@ -1,0 +1,38 @@
+<div class="pageContent">
+	<form method="post" action="/sysDept/create"
+		class="pageForm required-validate"
+		onsubmit="return validateCallback(this,dialogAjaxDone);">
+		<div class="pageFormContent" layoutH="56">
+			<p>
+				<label>部门名称：</label> <input name="name" type="text"
+					class="required" size="30" />
+			</p>
+			<p>
+				<label>备注：</label> <input name="remark" type="text"
+					class="required" size="30" />
+			</p>
+			<p>
+				<label>排序：</label> <input name="seq" type="text" class="required"
+					size="30" />
+			</p>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li>
+					<div class="buttonActive">
+						<div class="buttonContent">
+							<button type="submit">确定</button>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="button">
+						<div class="buttonContent">
+							<button type="button" class="close">取消</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</form>
+</div>

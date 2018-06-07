@@ -1,0 +1,31 @@
+<!--#set(Table table) -->
+package ${packageName};
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import com.hxj.common.api.beans.PageQueryDto;
+import com.hxj.core.base.BaseController;
+
+import ${basePackage}.api.dto.${table.entityName}Dto;
+import ${basePackage}.api.service.${table.entityName}Service;
+
+/**
+ * ${table.tableComment}控制类
+ * 
+ * @author huangxj
+ *
+ * @date ${time}
+ * 
+ * @version v1.0
+ */
+public class ${table.entityName}Controller extends BaseController {
+
+	@Lazy
+	@Autowired
+	@Qualifier("sysUserService")
+	private ${table.entityName}Service ${table.entityVariableName}Service;
+	
+}

@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.hxj</groupId>
+  <artifactId>hxj-component</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>hxj-parents</module>
+  	<module>hxj-core</module>
+  	<module>hxj-common</module>
+  	<module>hxj-dwz</module>
+  	<module>hxj-db-core</module>
+  	<module>hxj-common-api</module>
+  	<module>hxj-starter-dubbo</module>
+  	<module>hxj-acl-rpc</module>
+  	<module>hxj-acl-rpc-api</module>
+  	<module>hxj-pom</module>
+  	<module>hxj-dubbo</module>
+  </modules>
+</project>

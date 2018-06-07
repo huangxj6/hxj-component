@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 权限表服务 -->
+	<dubbo:reference id="sysAclService"
+			interface="com.hxj.acl.rpc.api.service.SysAclService" timeout="100000" />
+
+	<!-- 权限模块表服务 -->
+	<dubbo:reference id="sysAclModuleService"
+			interface="com.hxj.acl.rpc.api.service.SysAclModuleService" timeout="100000" />
+
+	<!-- 部门表服务 -->
+	<dubbo:reference id="sysDeptService"
+			interface="com.hxj.acl.rpc.api.service.SysDeptService" timeout="100000" />
+
+	<!-- 日志表服务 -->
+	<dubbo:reference id="sysLogService"
+			interface="com.hxj.acl.rpc.api.service.SysLogService" timeout="100000" />
+
+	<!-- 角色表服务 -->
+	<dubbo:reference id="sysRoleService"
+			interface="com.hxj.acl.rpc.api.service.SysRoleService" timeout="100000" />
+
+	<!-- 角色权限表服务 -->
+	<dubbo:reference id="sysRoleAclService"
+			interface="com.hxj.acl.rpc.api.service.SysRoleAclService" timeout="100000" />
+
+	<!-- 角色用户表服务 -->
+	<dubbo:reference id="sysRoleUserService"
+			interface="com.hxj.acl.rpc.api.service.SysRoleUserService" timeout="100000" />
+
+	<!-- 用户表服务 -->
+	<dubbo:reference id="sysUserService"
+			interface="com.hxj.acl.rpc.api.service.SysUserService" timeout="100000" />
+
+</beans>

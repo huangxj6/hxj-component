@@ -1,0 +1,20 @@
+<!--#set(Table table) -->
+package ${packageName};
+
+import ${basePackage}.api.dto.${table.entityName}Dto;
+import ${basePackage}.api.entity.${table.entityName};
+import com.hxj.common.api.base.BaseService;
+
+/**
+ * ${table.tableComment}服务类接口
+ * 
+ * @author huangxj
+ *
+ * @date ${time}
+ * 
+ * @version v1.0
+ */
+public interface ${table.entityName}Service extends BaseService<${table.entityName}, ${table.entityName}Dto> {
+
+
+}

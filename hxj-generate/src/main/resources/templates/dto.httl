@@ -1,0 +1,19 @@
+<!--#set(Table table) -->
+package ${packageName};
+
+import ${basePackage}.api.entity.${table.entityName};
+
+/**
+ * ${table.tableComment}dto
+ * 
+ * @author huangxj
+ *
+ * @date ${time}
+ * 
+ * @version v1.0
+ */
+public class ${table.entityName}Dto extends ${table.entityName} {
+
+	private static final long serialVersionUID = 1L;
+	
+}

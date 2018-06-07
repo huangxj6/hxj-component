@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 
+	1、当只使用 XML而不使用接 口的时候 ， namespace的值可以设置为任意不重复的名称 。
+	2、标签的 id 属性值在任何时候都不能出现英文句号“.”，并且同一个命名 空间下不能 出现重复的 id
+	3、因为接口方法是可以重载的，所以接口中可以出现多个同名但参数不同的方法，但是XML中id的值不能重复，
+	       因而接口中的所有同名方法会对应着 XML中的同一个 id的方法。最常见的用法就是，同名方法中其中一个方
+	       法增加一个 RowBounds类型的参数用于实现分页查询。
+
+ -->
+<mapper namespace="com.hxj.demo.rpc.mapper.UserMapper">
+
+	<select id="findAll" resultType="User">
+	    select * from user
+	</select>
+ 
+</mapper>

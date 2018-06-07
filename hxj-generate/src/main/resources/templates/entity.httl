@@ -1,0 +1,41 @@
+<!--#set(Table table) -->
+package ${packageName};
+
+import java.util.Date;
+import java.math.BigDecimal;
+
+import com.hxj.common.api.base.BaseEntity;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+/**
+ * ${table.tableComment}实体
+ * 
+ * @author huangxj
+ *
+ * @date ${time}
+ * 
+ * @version v1.0
+ */
+@Getter
+@Setter
+@ToString
+public class ${table.entityName} extends BaseEntity {
+
+	private static final long serialVersionUID = 1L;
+	
+	#for(Columns columns : table.columnsList)
+	/**
+	 *${columns.columnComment}
+	 */
+	public static final String ${columns.constantName} = "${columns.fieldName}";
+	#end
+	
+	#for(Columns columns : table.columnsList)
+	@ApiModelProperty(value = "${columns.columnComment}")
+	private ${columns.dataType} ${columns.fieldName};
+	#end
+}

@@ -1,0 +1,21 @@
+<div id="header">
+	<div class="headerNav">
+		<a class="logo" href="http://j-ui.com">标志</a>
+		<ul class="nav">
+			<li><a>您好，${loginName}</a></li>
+			<li><a href="sysUser/changePassword.action" target="dialog"
+				width="490" height="240" resizable="false" mixable="false"
+				rel="changePassword">修改密码</a></li>
+			<li><a href="logout">退出</a></li>
+		</ul>
+		<ul class="themeList" id="themeList">
+			<li theme="default"><div class="selected">蓝色</div></li>
+			<li theme="green"><div>绿色</div></li>
+			<!--<li theme="red"><div>红色</div></li>-->
+			<li theme="purple"><div>紫色</div></li>
+			<li theme="silver"><div>银色</div></li>
+			<li theme="azure"><div>天蓝</div></li>
+		</ul>
+	</div>
+
+</div>

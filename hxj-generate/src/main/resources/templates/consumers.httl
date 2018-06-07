@@ -1,0 +1,14 @@
+<!--#set(List<Table> tableList) -->
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+#for(Table table : tableList)
+	<!-- <!--${table.tableComment}服务 -->
+	<dubbo:reference id="${table.entityVariableName}Service"
+			interface="${packageName}.api.service.${table.entityName}Service" timeout="100000" />
+
+#end
+</beans>

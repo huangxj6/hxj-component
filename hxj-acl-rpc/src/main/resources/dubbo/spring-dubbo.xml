@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<dubbo:application name="${dubbo.applicationName}"
+		logger="slf4j" />
+
+	<dubbo:registry protocol="zookeeper" address="${zookeeper.address}" />
+	<dubbo:protocol name="dubbo" port="${dubbo.port}" />
+
+	<!-- 延迟到Spring初始化完成后，再暴露服务,服务调用超时设置为10秒,超时不重试 -->
+	<dubbo:provider delay="-1" timeout="1000000000" retries="0" />
+
+	<!-- 以下配置为服务的定义：服务注册到spring和dubbo均在此处定义，这样能做到对服务的可控，每个微服务所对外提供的服务其实不多，所以个人认为基于xml的配置相对于注解方式的配置来说会更加灵活 -->
+	
+	<!-- 权限控制模块 -->
+	<import resource="dubbo-acl.xml"/>
+	
+</beans>

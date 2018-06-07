@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 权限表服务 -->
+	<bean id="sysAclServiceImpl" class="com.hxj.acl.rpc.service.SysAclServiceImpl" />
+	<dubbo:service interface="com.hxj.acl.rpc.api.service.SysAclService"
+		ref="sysAclServiceImpl" protocol="dubbo" />
+
+	<!-- 权限模块表服务 -->
+	<bean id="sysAclModuleServiceImpl" class="com.hxj.acl.rpc.service.SysAclModuleServiceImpl" />
+	<dubbo:service interface="com.hxj.acl.rpc.api.service.SysAclModuleService"
+		ref="sysAclModuleServiceImpl" protocol="dubbo" />
+
+	<!-- 部门表服务 -->
+	<bean id="sysDeptServiceImpl" class="com.hxj.acl.rpc.service.SysDeptServiceImpl" />
+	<dubbo:service interface="com.hxj.acl.rpc.api.service.SysDeptService"
+		ref="sysDeptServiceImpl" protocol="dubbo" />
+
+	<!-- 日志表服务 -->
+	<bean id="sysLogServiceImpl" class="com.hxj.acl.rpc.service.SysLogServiceImpl" />
+	<dubbo:service interface="com.hxj.acl.rpc.api.service.SysLogService"
+		ref="sysLogServiceImpl" protocol="dubbo" />
+
+	<!-- 角色表服务 -->
+	<bean id="sysRoleServiceImpl" class="com.hxj.acl.rpc.service.SysRoleServiceImpl" />
+	<dubbo:service interface="com.hxj.acl.rpc.api.service.SysRoleService"
+		ref="sysRoleServiceImpl" protocol="dubbo" />
+
+	<!-- 角色权限表服务 -->
+	<bean id="sysRoleAclServiceImpl" class="com.hxj.acl.rpc.service.SysRoleAclServiceImpl" />
+	<dubbo:service interface="com.hxj.acl.rpc.api.service.SysRoleAclService"
+		ref="sysRoleAclServiceImpl" protocol="dubbo" />
+
+	<!-- 角色用户表服务 -->
+	<bean id="sysRoleUserServiceImpl" class="com.hxj.acl.rpc.service.SysRoleUserServiceImpl" />
+	<dubbo:service interface="com.hxj.acl.rpc.api.service.SysRoleUserService"
+		ref="sysRoleUserServiceImpl" protocol="dubbo" />
+
+	<!-- 用户表服务 -->
+	<bean id="sysUserServiceImpl" class="com.hxj.acl.rpc.service.SysUserServiceImpl" />
+	<dubbo:service interface="com.hxj.acl.rpc.api.service.SysUserService"
+		ref="sysUserServiceImpl" protocol="dubbo" />
+
+</beans>
